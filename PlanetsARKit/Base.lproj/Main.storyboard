@@ -1,37 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rbW-5W-4Rt">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--PlanetAR-->
+        <scene sceneID="fxR-vW-x0G">
+            <objects>
+                <viewController id="rbW-5W-4Rt" customClass="FirstViewController" customModule="PlanetsARKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DNg-7i-lh3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98x-Xu-OFv">
+                                <rect key="frame" x="0.0" y="342" width="320" height="216"/>
+                                <color key="tintColor" red="0.96878945709999997" green="0.61257079839999995" blue="0.65430781819999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8d-qK-5xN">
+                                <rect key="frame" x="108" y="268.5" width="104" height="31"/>
+                                <color key="backgroundColor" red="0.43201224620000001" green="0.61257079839999995" blue="0.65430781819999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go to Planet"/>
+                                <connections>
+                                    <action selector="goButtonClicked:" destination="rbW-5W-4Rt" eventType="touchUpInside" id="eel-uW-awF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the Planet after that click the button" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHG-wK-ktV">
+                                <rect key="frame" x="4" y="0.0" width="312" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.99704355" green="0.9266371336" blue="0.86241410500000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ovk-6M-XyL"/>
+                        <color key="backgroundColor" red="0.96878945709999997" green="0.62508674220000005" blue="0.61654740149999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="98x-Xu-OFv" firstAttribute="trailing" secondItem="ovk-6M-XyL" secondAttribute="trailing" id="4j8-Qu-onS"/>
+                            <constraint firstItem="F8d-qK-5xN" firstAttribute="centerX" secondItem="DNg-7i-lh3" secondAttribute="centerX" id="LNc-f4-UHT"/>
+                            <constraint firstItem="vHG-wK-ktV" firstAttribute="top" secondItem="ovk-6M-XyL" secondAttribute="top" id="M0q-CZ-eAc"/>
+                            <constraint firstItem="ovk-6M-XyL" firstAttribute="bottom" secondItem="98x-Xu-OFv" secondAttribute="bottom" constant="10" id="O3y-ek-jhG"/>
+                            <constraint firstItem="vHG-wK-ktV" firstAttribute="leading" secondItem="ovk-6M-XyL" secondAttribute="leading" constant="4" id="ZKs-ci-J2f"/>
+                            <constraint firstItem="ovk-6M-XyL" firstAttribute="trailing" secondItem="vHG-wK-ktV" secondAttribute="trailing" constant="4" id="biW-lo-Hcx"/>
+                            <constraint firstItem="F8d-qK-5xN" firstAttribute="centerY" secondItem="DNg-7i-lh3" secondAttribute="centerY" id="caC-vI-SqB"/>
+                            <constraint firstItem="98x-Xu-OFv" firstAttribute="leading" secondItem="ovk-6M-XyL" secondAttribute="leading" id="i06-OO-h96"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="PlanetAR" id="vam-aC-Jpm"/>
+                    <connections>
+                        <outlet property="pickerView" destination="98x-Xu-OFv" id="cnh-8O-usJ"/>
+                        <segue destination="BV1-FR-VrT" kind="presentation" identifier="toSecond" modalPresentationStyle="fullScreen" id="Asv-J3-wsO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gY6-Cs-kds" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="251.25" y="77.112676056338032"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="PlanetsARKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </arscnView>
                         </subviews>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3RV-9a-fG7"/>
                     <connections>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1031.25" y="78.16901408450704"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

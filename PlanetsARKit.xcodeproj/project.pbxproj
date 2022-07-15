@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45470CFF288217160070758C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45470CFE288217160070758C /* FirstViewController.swift */; };
 		454A8A2D287B8849008FA0BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454A8A2C287B8849008FA0BD /* AppDelegate.swift */; };
 		454A8A2F287B8849008FA0BD /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 454A8A2E287B8849008FA0BD /* art.scnassets */; };
 		454A8A31287B8849008FA0BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454A8A30287B8849008FA0BD /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45470CFD288210900070758C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		45470CFE288217160070758C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		454A8A29287B8849008FA0BD /* PlanetsARKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanetsARKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		454A8A2C287B8849008FA0BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		454A8A2E287B8849008FA0BD /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 		454A8A20287B8849008FA0BD = {
 			isa = PBXGroup;
 			children = (
+				45470CFD288210900070758C /* README.md */,
 				454A8A2B287B8849008FA0BD /* PlanetsARKit */,
 				454A8A2A287B8849008FA0BD /* Products */,
 			);
@@ -57,6 +61,7 @@
 			children = (
 				454A8A2C287B8849008FA0BD /* AppDelegate.swift */,
 				454A8A2E287B8849008FA0BD /* art.scnassets */,
+				45470CFE288217160070758C /* FirstViewController.swift */,
 				454A8A30287B8849008FA0BD /* ViewController.swift */,
 				454A8A32287B8849008FA0BD /* Main.storyboard */,
 				454A8A35287B884B008FA0BD /* Assets.xcassets */,
@@ -137,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45470CFF288217160070758C /* FirstViewController.swift in Sources */,
 				454A8A31287B8849008FA0BD /* ViewController.swift in Sources */,
 				454A8A2D287B8849008FA0BD /* AppDelegate.swift in Sources */,
 			);
@@ -214,7 +220,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -268,7 +274,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
